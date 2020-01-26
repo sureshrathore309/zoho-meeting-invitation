@@ -1,0 +1,204 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Zoho",
+		"_postman_id": "c400b71e-d35b-99c9-62ac-f0f78e3ea5b8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Meeting Localhost",
+			"request": {
+				"url": {
+					"raw": "localhost:8081/sendInvitation?apikey=Your API KEY&authtoken=59ef21448b10417347265f3e82eb32c4&topic=Meeting Description&participants=test@gmail.com&sendMail=yes&date=2020-01-28 03:00 AM&agenda=Zoho meeting test&timeZone=Asia/Kolkata",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"sendInvitation"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "Your API KEY",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "authtoken",
+							"value": "59ef21448b10417347265f3e82eb32c4",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "topic",
+							"value": "Meeting Description",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "participants",
+							"value": "test@gmail.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sendMail",
+							"value": "yes",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "2020-01-28 03:00 AM",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "agenda",
+							"value": "Zoho meeting test",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "timeZone",
+							"value": "Asia/Kolkata\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Token Generation",
+			"request": {
+				"url": {
+					"raw": "https://accounts.zoho.com/apiauthtoken/nb/create?SCOPE=ZohoMeeting/meetingapi&EMAIL_ID=YOU_EMAIL&PASSWORD=YOUR_PASSWORD",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"zoho",
+						"com"
+					],
+					"path": [
+						"apiauthtoken",
+						"nb",
+						"create"
+					],
+					"query": [
+						{
+							"key": "SCOPE",
+							"value": "ZohoMeeting/meetingapi",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "EMAIL_ID",
+							"value": "YOU_EMAIL",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "PASSWORD",
+							"value": "YOUR_PASSWORD",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Meeting",
+			"request": {
+				"url": {
+					"raw": "https://meeting.zoho.com/api/private/json/meetings/createMeeting?apikey=Your API KEY&authtoken=59ef21448b10417347265f3e82eb32c4&topic=Meeting Description&participants=test@gmail.com&sendMail=yes&date=2020-01-28 03:00 AM&agenda=Zoho meeting test&timeZone=Asia/Kolkata",
+					"protocol": "https",
+					"host": [
+						"meeting",
+						"zoho",
+						"com"
+					],
+					"path": [
+						"api",
+						"private",
+						"json",
+						"meetings",
+						"createMeeting"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "Your API KEY",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "authtoken",
+							"value": "59ef21448b10417347265f3e82eb32c4",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "topic",
+							"value": "Meeting Description",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "participants",
+							"value": "test@gmail.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sendMail",
+							"value": "yes",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "date",
+							"value": "2020-01-28 03:00 AM",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "agenda",
+							"value": "Zoho meeting test",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "timeZone",
+							"value": "Asia/Kolkata\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
