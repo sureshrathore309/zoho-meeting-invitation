@@ -1,0 +1,8 @@
+zoho:
+  host: "meeting.zoho.com"
+  basePath: "/api/private/json/meetings"
+  apiKey: "YOUR API KEY"
+  authToken: "YOUR ZOHO ACCOUNT AUTH TOKEn"
+http:
+  port: "8081"
+  
