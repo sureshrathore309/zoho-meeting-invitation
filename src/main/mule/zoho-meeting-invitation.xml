@@ -6,9 +6,9 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 
 
-	<flow name="zohomeetinginvitationFlow" doc:id="bd320d1e-798c-4958-af2a-5ed047f4cb21" >
+	<flow name="zoho-meetingFlow" doc:id="bd320d1e-798c-4958-af2a-5ed047f4cb21" >
 		<http:listener doc:name="8081/sendInvitation" doc:id="74dd611e-fdfa-49a0-aa81-901cf97a5988" config-ref="HTTP_Listener_config" path="/sendInvitation"/>
-		<http:request method="POST" doc:name="zoho config" doc:id="225483df-8185-4f25-b76f-b01bc2c4599c" config-ref="ZohoConfig" path="/createMeeting">
+		<http:request method="POST" doc:name="HTTP POST Zoho Meeting API" doc:id="225483df-8185-4f25-b76f-b01bc2c4599c" config-ref="ZohoConfig" path="/createMeeting">
 			<http:query-params ><![CDATA[#[output application/java
 ---
 {
@@ -24,7 +24,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		</http:request>
 		<error-handler >
 			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="4156678f-d6de-4ec9-a96a-b64e16ccf893" >
-				<set-payload value="#[error.description]" doc:name="Set Error Desciption" doc:id="dc0ad1d9-417f-4c2d-ab52-6828b26a9cdf" />
+				<set-payload value="#[error.description]" doc:name="PL SET Final Error Response" doc:id="dc0ad1d9-417f-4c2d-ab52-6828b26a9cdf" />
 			</on-error-propagate>
 		</error-handler>
 	</flow>
